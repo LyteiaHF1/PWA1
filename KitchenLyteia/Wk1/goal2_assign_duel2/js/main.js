@@ -33,8 +33,11 @@ function fight(){
 	for(var i =0; i<10; i++){
 		//console.log(i);
 		//random formula --- Math.floor(Math.random()*(max-min)+ min)
-		var minDamage1 = playerOneDamage *.5;
-		var minDamage2 = playerTwoDamage *.5;
+		//var minDamage1 = playerOneDamage *.5;
+		var minDamage1 = fighter1[1] *.5;
+		//var minDamage2 = playerTwoDamage *.5;
+		var minDamage2 = fighter2[1] *.5;
+
 		//var f1 = Math.floor(Math.random()*(playerOneDamage - minDamage1)+minDamage1);
 		var f1 = Math.floor(Math.random()*(fighter1[1] - minDamage1)+minDamage1);
 		//var f2 = Math.floor(Math.random()*(playerTwoDamage - minDamage2)+minDamage2);
