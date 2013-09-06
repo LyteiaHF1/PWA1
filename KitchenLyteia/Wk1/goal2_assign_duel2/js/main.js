@@ -1,7 +1,7 @@
 /*
 Lyteia Kitchen
-September 4,2013
-Assignment: Goal1: Assignmnet: Duel Battle 1
+September 5,2013
+Assignment: Goal2: Assignmnet: Duel Battle 2
 */
 
 //self-executing function
