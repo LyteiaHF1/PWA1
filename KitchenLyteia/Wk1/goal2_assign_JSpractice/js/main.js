@@ -50,11 +50,11 @@ Javascript Practice
     console.log('------ Goal2: Assignment: JavaScript Practice ----------');
 
     console.log("1. avg of an array of numbers");
-    var avgNumbers = function(array){
+    var avgNumbers = function(arr){
 
         //CODE GOES HERE
-        var sum = eval(array.join("+"));
-        var average = eval(array.join("+"))/array.length
+        var sum = eval(arr.join("+"));
+        var average = eval(arr.join("+"))/arr.length
         return average;
        
     }
@@ -69,7 +69,7 @@ Javascript Practice
         var fullName = function(firstname, lastname){
             return firstname + " " +lastname;
         }
-        fullName("James", "Bond");
+        //fullName("James", "Bond");
 
     console.log(fullName('James', 'Bond'));
 
@@ -79,7 +79,8 @@ Javascript Practice
 
         //PUT FUNCTION HERE
         var wordCount = function(str){
-           
+        var words = str.split(" ");
+        return words.length;
 
         }
        
@@ -117,14 +118,14 @@ Javascript Practice
     console.log("6. find number and create an array of even or odd numbers");
 
         //PUT FUNCTION HERE
-        var findNum = function(){
-            /*
+        var findNum = function(arr){
+            
             var oddNumCount = 0;
-            for(var i = 0; i<array.length; i++){
+            for(var i = 0; i<arr.length; i++){
                 oddNumCount ++
             }
             return oddNumCount;
-            */
+            
 
         }
 
