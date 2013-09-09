@@ -50,10 +50,15 @@ Javascript Practice
     console.log('------ Goal2: Assignment: JavaScript Practice ----------');
 
     console.log("1. avg of an array of numbers");
-    var avgNumbers = function(arr){
+    var avgNumbers = function(array){
 
         //CODE GOES HERE
-    };
+        var sum = eval(array.join("+"));
+        var average = eval(array.join("+"))/array.length
+        return average;
+       
+    }
+    avgNumbers([1,2,3,4,5]);
 
     console.log('avg number = ', avgNumbers([1,2,3,4,5]));
 
@@ -61,9 +66,10 @@ Javascript Practice
     console.log("2. concat first and last name");
 
         //PUT FUNCTION HERE
-        var fullName = function("firstname", "lastname"){
-            return "firstname" + "lastname"
+        var fullName = function(firstname, lastname){
+            return firstname + " " +lastname;
         }
+        fullName("James", "Bond");
 
     console.log(fullName('James', 'Bond'));
 
@@ -72,6 +78,11 @@ Javascript Practice
     var ipsum = "this is test text that is being used as input to a function"
 
         //PUT FUNCTION HERE
+        var wordCount = function(str){
+           
+
+        }
+       
 
     console.log(wordCount(ipsum));
 
@@ -79,13 +90,26 @@ Javascript Practice
     console.log("4. sentence char count");
 
         //PUT FUNCTION HERE
+        var charCount = function(str){
+           var count = str.length;
+           return count;
 
+
+        }
+       
     console.log(charCount(ipsum));
 
     //--------------------------------------------------------
     console.log("5. how many vowels in a word");
-
+         //var vowels = "aeiou";
         //PUT FUNCTION HERE
+        var vowelsInWord = function(str){
+            var match = str.match(/[aeiou]/gi);
+            var count = match ? match.length : 0;
+            return count;
+            
+        }
+        //vowelsInWord("Javascript");
 
     console.log(vowelsInWord('JavaScript'));
 
@@ -93,6 +117,16 @@ Javascript Practice
     console.log("6. find number and create an array of even or odd numbers");
 
         //PUT FUNCTION HERE
+        var findNum = function(){
+            /*
+            var oddNumCount = 0;
+            for(var i = 0; i<array.length; i++){
+                oddNumCount ++
+            }
+            return oddNumCount;
+            */
+
+        }
 
     console.log(findNum([31,22,4,67,83,6,5,4]));
     console.log(findNum([31,22,4,67,83,6,5,4], false));
