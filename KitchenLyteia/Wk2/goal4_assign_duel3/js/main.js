@@ -21,9 +21,44 @@ Assignment: Goal4: Assignmnet: Duel Battle 3
 //var playerTwoHealth = 100;
 
 //Using arrays to store player name,damgae and health
-var fighter1 = {name:Spiderman,damage:20,health:100};//Player name, Player Damage, Player Health
-var fighter2 = {name:Batman,damage:20,health:100};//Player name, Player Damage, Player Health
+var fighters = {
+	fighter1:[
+		{
+			name:Spiderman,
+			damage:20,
+			health:100
 
+		}
+	],
+	fighter2:[
+		{
+			name:Batman,
+			damage:20,
+			health:100
+
+		}
+
+	]
+}
+
+
+/*
+var fighter1 = [
+	{
+	name:Spiderman,
+	damage:20,
+	health:100
+
+	};
+]//Player name, Player Damage, Player Health
+var fighter2 = [
+	{
+	name:Batman,
+	damage:20,
+	health:100
+	};
+]//Player name, Player Damage, Player Health
+*/
 var round = 0;
 
 function fight(){
