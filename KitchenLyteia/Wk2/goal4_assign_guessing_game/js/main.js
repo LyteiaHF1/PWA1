@@ -10,7 +10,7 @@
 //Game variables
 (function () {
 var guess = Math.round(Math.random()*(9)+1);
-console.log(g);
+console.log(guess);
 var guesses = 0;
 
 document.querySelector("button").onclick = function game(){
