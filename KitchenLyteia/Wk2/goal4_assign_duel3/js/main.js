@@ -55,6 +55,8 @@ document.getElementById("fight_btn").onclick = function fight(){
 			document.getElementById("round").innerHTML = "Round "+round+" - "+results;
 			document.getElementById("fight_btn").onclick = "event.cancelBubble = true";
 			document.querySelector(".buttonblue").innerHTML = "RESET";
+
+			
 			document.querySelector("#fight_btn .buttonblue").onclick = function reset(){
 				window.location.reload();
 			}
