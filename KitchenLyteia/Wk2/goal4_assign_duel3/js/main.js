@@ -34,9 +34,9 @@ document.getElementById("fight_btn").onclick = function fight(){
 		var f1=Math.floor(Math.random()*(fighters[0].damage-fighter1minDam)+fighter1minDam);
 		var f2=Math.floor(Math.random()*(fighters[1].damage-fighter2minDam)+fighter2minDam);
 
-		//inflict damage
-		fighters[0].health-=f1;
-		fighters[1].health-=f2;
+		//This Is What Causes The Damage
+		fighters[0].health-=f1; //if fighteres index array 0 
+		fighters[1].health-=f2;//if fighteres index array 01
 
 		console.log(fighters[0].name+";"+fighters[0].health+" "+fighters[1].name+";"+fighters[1].health);
 
@@ -56,7 +56,7 @@ document.getElementById("fight_btn").onclick = function fight(){
 			document.getElementById("fight_btn").onclick = "event.cancelBubble = true";
 			document.querySelector(".buttonblue").innerHTML = "RESET";
 
-			
+
 			document.querySelector("#fight_btn .buttonblue").onclick = function reset(){
 				window.location.reload();
 			}
