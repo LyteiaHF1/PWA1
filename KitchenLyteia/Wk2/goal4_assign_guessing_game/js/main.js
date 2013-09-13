@@ -14,6 +14,7 @@ console.log(guess);
 var guesses = 0;
 
 document.querySelector("button").onclick = function game(){
+	//if guess is less than 3 
 		if(guesses<3){
 			
 			var num = document.querySelector("form #input").value;
@@ -23,17 +24,17 @@ document.querySelector("button").onclick = function game(){
 			if(num == ""){
 				document.getElementById("output").innerHTML = "Guess my magic number between 1-10 <br/> Guess "+guesses+" - You didn't guess anything!!!!";
 				return false;
-			}else if (num > 10){
+			}else if (num > 10){//if num is greater than 10
 				document.getElementById("output").innerHTML = "Guess my magic number between 1-10 <br/> Guess "+guesses+" - "+num+" is too high!!!!! Try coming down!";
 				return false;
-			}else if (num < 1){
+			}else if (num < 1){//if num is less than 1
 				document.getElementById("output").innerHTML = "Guess my magic number between 1-10 <br/> Guess "+guesses+" - "+num+" is too low!!!!! Try coming up!";
 				return false;
 			}else{
-				if(num < guess){
+				if(num < guess){//if num is less than guess 
 					document.getElementById("output").innerHTML = "Guess my magic number between 1-10 <br/> Guess "+guesses+" - My number is higher than "+num;
 					return false;
-				}else if(num > guess){
+				}else if(num > guess){//if num is greater than guess
 					document.getElementById("output").innerHTML = "Guess my magic number between 1-10 <br/> Guess "+guesses+" - My number is lower than "+num;
 					return false;
 				}else{
