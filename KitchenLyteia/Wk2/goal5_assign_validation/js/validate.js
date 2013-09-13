@@ -11,6 +11,8 @@
         userName:document.querySelector("#f_username"),
         email:document.querySelector("#f_email"),
         phone:document.querySelector("#f_phone"),
+        password:document.querySelector("#f_password"),
+        ssNum:document.querySelector("#f_ssn")
     }
 
     myform.onsubmit = function(e){
@@ -18,9 +20,12 @@
         //Below is one example of the validateField call with an argument.
         //You must dynamically retrieve the ID name from the DOM/HTML.
 
-        validateField(id);  //id = is the form input field ID
+        //validateField(id);  //id = is the form input field ID
         validateField(formData.userName);
         validateField(formData.email);
+        validateField(formData.phone);
+        validateField(formData.password);
+        validateField(formData.ssNum);
 
 
         e.preventDefault();
