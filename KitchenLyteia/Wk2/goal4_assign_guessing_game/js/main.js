@@ -15,6 +15,7 @@ var guesses = 0;
 
 document.querySelector("button").onclick = function game(){
 		if(guesses<3){
+			
 			var num = document.querySelector("form #input").value;
 
 			guesses++;
@@ -39,6 +40,8 @@ document.querySelector("button").onclick = function game(){
 					document.getElementById("output").innerHTML = "WINNER!!!!! "+num+" is correct!!!";
 					document.querySelector("form button").onclick = "event.cancelBubble = true";
 					document.querySelector("form button").innerHTML = "RESET";
+
+
 					document.querySelector("form button").onclick = function reset(){
 						window.location.reload();
 					}
