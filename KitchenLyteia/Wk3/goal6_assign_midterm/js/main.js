@@ -95,8 +95,8 @@ function onClick(){
 
 function fin(){
 	if (number == students.length - 1) {
-		document.querySelector(".buttonred").innerHTML = "Done!!!";
-		domStuff.btn.removeEventListener("click", onClick, false);
+		document.querySelector(".buttonred").innerHTML = "Done!!!";//change to done after all is looped thru
+		domStuff.btn.removeEventListener("click", onClick, false);//remove event listener 
 	}
 }
 //avg
