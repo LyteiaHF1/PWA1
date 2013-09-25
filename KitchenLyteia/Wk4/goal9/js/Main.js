@@ -28,4 +28,66 @@ console.log("start canvas");
     	displayData();
 
     }, false);
-    })();
+    	function displayData(){
+
+    	// Array of data for the cart
+    	// [Buffalo, Tonawanda, Hamburg, Niagara Falls]
+    	var data = [34.97, 39.06, 48.72, 34.97];
+    	// sets the initial x position for the bars in the chart 
+    	var xPos = 100;
+
+    	// sets the max height that the bars can be
+    	var maxHeight = 280;
+
+    	// for loop to go through the array and make a bar for each item
+    	for(var i = 0, max = data.length; i < max; i++){
+
+		  	// sets the height of the bar based on the percentage of the data to the max height
+		  	var height = (280 * data[i]) / 100
+		  	// cerate the bar
+		   	ctx.beginPath();
+			ctx.fillStyle = "#3c3c3c";
+			ctx.fillRect(xPos, 380, 50, -height);
+			ctx.stroke();
+
+			// add to the xPos so each bar is evenly spaced out
+			xPos += 95;
+    	} 
+
+    	// text for title
+		ctx.fillStyle = "#ffffff";
+		ctx.font = "18px Georgia";
+		ctx.fillText("Average Annual Precipitation for New York(inches)", 65, 40);
+
+		// text for x-axis
+		ctx.font = "15px Georgia";
+		ctx.fillText("Buffalo", 95, 410);
+		ctx.fillText("Tonawanda", 198, 410);
+		ctx.fillText("Hamburg", 295, 410);
+		ctx.fillText("Niagara Falls", 373, 410);
+
+		//text for y-axis
+		ctx.font = "16px Georgia";
+		ctx.fillText("0", 40, 385);
+		ctx.fillText("25", 35, 315);
+		ctx.fillText("50", 35, 245);
+		ctx.fillText("75", 35, 175);
+		ctx.fillText("100", 30, 105);
+
+    	// line for x-axis
+    	ctx.beginPath();
+		ctx.strokeStyle = "#292929";
+		ctx.lineWidth = 2;
+		ctx.moveTo(70, 380);
+		ctx.lineTo(470, 380);
+		ctx.stroke();
+
+		// line for y-axis
+		ctx.beginPath();
+		ctx.strokeStyle = "#292929";
+		ctx.lineWidth = 2;
+		ctx.moveTo(70, 380);
+		ctx.lineTo(70, 70);
+		ctx.stroke();  
+    }
+})();
